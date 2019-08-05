@@ -1,0 +1,6 @@
+<h1>Edition de Gossip</h1>
+<h2>Voici le Gossip selectionne</p></h2>
+<p><strong><%= Gossip.find(@index).user.first_name%></strong></p>
+<p><strong><%= Gossip.find(@index).user.last_name%></strong></p>
+<p><em><%= Gossip.find(@index).title%></em></p>
+<p><%= Gossip.find(@index).content%></p>
