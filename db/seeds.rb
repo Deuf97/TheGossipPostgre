@@ -75,3 +75,4 @@ end
     end
     Comment.create(user: User.all.sample, commentable: thing, content: Faker::Quote.matz)
 end
+puts "DB completee"

@@ -1,0 +1,15 @@
+<h1>Liste de tous les Gossips</h1>
+<p>
+
+    <% gossips.each_with_index do |gossip, index| %>
+        <p>
+          <%= gossip.author %><br/>
+          <a href="/gossip/<%=index%>"><%= gossip.content %></a>
+        </p>
+      <% end %>
+    <form action='/' method='POST'>
+      Choisi le Gossip que tu veux voir:<input type='text' name='id'/>
+      <input type='submit'/>
+    </form>
+
+</p>
