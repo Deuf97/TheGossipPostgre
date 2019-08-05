@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'user/:id', to:'dynamic#user'
+  resources :user, controller: "user"
   get 'gossip/:id', to: 'dynamic#gossip'
+  resources :gossip, controller: "gossip"
   root 'static#home'
   get 'create', to: 'static#create'
   get 'connect', to: 'dynamic#connect'

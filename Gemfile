@@ -9,7 +9,6 @@ gem 'faker'
 gem 'table_print'
 gem 'activerecord' 
 gem 'rails_db'
-gem 'bootstrap'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -68,3 +67,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Bootstrap
+gem 'bootstrap', '~> 4.3.1'
+gem "bootstrap-sass", ">= 3.4.1"
+gem 'rails-ujs', '~> 0.1.0'
+gem 'autoprefixer-rails'
