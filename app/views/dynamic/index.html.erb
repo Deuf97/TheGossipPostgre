@@ -1,15 +1,20 @@
 <h1>Liste de tous les Gossips</h1>
 <p>
-
-    <% gossips.each_with_index do |gossip, index| %>
-        <p>
-          <%= gossip.author %><br/>
-          <a href="/gossip/<%=index%>"><%= gossip.content %></a>
-        </p>
-      <% end %>
-    <form action='/' method='POST'>
+    <div class="container d-flex flex-wrap">
+    <% @gossips.each_with_index do |gossip, index| %>
+         <div class="card col-3" style="width: 18rem;" margin= 2px>  
+           <div class="card-body">
+            <h5 class="card-title"><%= gossip.user.first_name%></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%=gossip.user.last_name %></h6>
+            <p><%= index%></p>
+                <p class="card-text"><%= gossip.content %></p>
+                <a href="/gossip/<%=index%> class="card-link">Edition</a>
+                <a href="#" class="card-link">Profil</a>
+            </div>
+        </div>
+      <% end %></div>
+    <%# <%<form action='/' method='POST'>
       Choisi le Gossip que tu veux voir:<input type='text' name='id'/>
       <input type='submit'/>
-    </form>
+    </form> %>
 
-</p>
